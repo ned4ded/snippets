@@ -1,0 +1,42 @@
+.custom {
+  &__carousel {
+    margin: 0 -15px; // fluid slider
+
+    &-indicators {
+      bottom: 10px;
+
+      margin: 0;
+
+      & li {
+        flex: 0 0 auto;
+
+        width: 10px;
+        height: 10px;
+
+        margin-right: 5px;
+        margin-left: 5px;
+
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &__slide {
+    &s {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+  }
+
+  &-content {
+    width: 95%; // prevent content to abut the window
+    height: 165px; // try to make height to be fixed, otherwise you will have jumping slider
+
+    margin: auto;
+
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,23 @@
+.slider {
+  position: relative;
+
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+
+  &__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__fixed {
+    /* for example */
+    width: 100%;
+    max-width: 335px;
+    margin: auto;
+  }
+}

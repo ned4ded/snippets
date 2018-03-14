@@ -1,0 +1,45 @@
+.custom {
+    &__tabs {
+      margin: 0 0 50px;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    &__tab {
+
+      &-link {
+
+        &:focus {
+
+        }
+
+        &:hover {
+
+        }
+
+        &.active {
+
+          &:focus {
+
+            &:hover {
+
+            }
+          }
+
+          &:hover {
+
+          }
+
+          &:active {
+
+          }
+        }
+      }
+    }
+
+    &__content {
+      margin: auto;
+      width: 95%;
+    }
+  }

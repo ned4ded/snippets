@@ -1,0 +1,27 @@
+@supports (-webkit-appearance:none) {
+  // Here goes Google Chrome 28+ specific properties
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // Here goes EI10+ styles;
+}
+
+@media screen\9 { // Note that here and below screen works only for screens, and use print for pdf or printing
+  // IE6, IE7
+}
+ 
+@media \0screen {
+  // IE 8
+}
+
+@media \0screen\,screen\9 {
+  // IE6, IE7, IE8
+}
+
+@media screen\0 {
+  // IE8, IE9, IE10
+}
+
+@media screen and (min-width:0\0) {
+  // IE9, IE10
+}

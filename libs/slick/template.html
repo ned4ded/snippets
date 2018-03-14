@@ -1,0 +1,27 @@
+<!-- Используй контейнер для расположения кнопок и стрелок-->
+<div class="slider">
+
+  <span id="slider-btn-left" class="slider__btn slider__btn--left"></span>
+
+  <!-- Верхний уровень слайдера, контейнер, на который вешаются d:b, p:r slick'ом-->
+  <ul id="slider" class="slider__list">
+
+    <!-- Контент слайдера, для элементов с фиксированной шириной / шириной уже слайда-->
+    <div>
+        <div class="slider__item">
+          <!-- Контент слайдера -->
+          <div class="content__fixed"></div>
+        </div>
+    </div>
+
+    <!-- Контент слайдера, для растягивающихся элементов. Эти элементы будут растягиваться в край каждого слайда -->
+    <div class="slider__item">
+      <div class="content__responsive"></div>
+    </div>
+  </ul>
+
+  <span id="slider-btn-right" class="slider__btn slider__btn--right"></span>
+
+  <div id="slider-dots" class="slider__dots"></div>
+
+</div>
