@@ -43,3 +43,19 @@ Table of Contents:
 
 ### Tips
 - [Browser Specific Hacks](/tips/browser-hacks/)
+
+## Backend
+### Logic
+#### Authentication
+- [Passport.js](/libs/passport.js/) - Authentication library. Require:
+  - Express;
+  - Express-session;
+  - Body-parser;
+- [Bcrypt](/libs/bcrypt/) - Password hashing;
+- [Connect-ensure-login](/frameworks/express/bcrypt/) - Check if user is logged in. Require:
+  - Express;
+  - Express-session;
+  - Body-parser;
+  
+### Model
+- [Mongoose](/frameworks/mongoose/);
