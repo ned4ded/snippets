@@ -10,6 +10,8 @@ Table of Contents:
   - [Tips](#tips);
 
 [Backend](#backend):
+1. [Authentication](#authentication);
+2. [Model](#model);
 
 
 
