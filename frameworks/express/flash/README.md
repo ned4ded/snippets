@@ -11,4 +11,4 @@ $ npm i -S connect-flash
 ## Example
 Main example you would find [hereby](./example.js);
 
-Usage example with Express and passport.js you would find [here](../../../libs/passport.js/local-combo/flash.js);
+Usage example with Express and passport.js you would find [here](https://github.com/ned4ded/snippets/tree/master/libs/passport.js/local-combo/flash.js);
