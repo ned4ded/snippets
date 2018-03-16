@@ -11,6 +11,7 @@ Table of Contents:
 
 [Backend](#backend):
 1. [Authentication](#authentication);
+2. [Logic Other](#other);
 2. [Model](#model);
 
 
