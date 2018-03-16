@@ -7,6 +7,8 @@ Table of Contents:
     2. [Autocomplete](#autocomplete);
     3. [Tabs](#tabs);
     4. [Accordion](#accordion);
+    5. [Canvas](#canvas);
+    6. [Other](#us-other);
   - [Tips](#tips);
 
 [Backend](#backend):
@@ -49,6 +51,10 @@ Table of Contents:
   - Native JS;
   - Powerful canvas animations;
   - Easel (mylib for paint-like application);
+
+### UI Other
+- Lightweight fullscreen presentation slider with animation and AJAX async slides loading; Небольшой файл разработан для бесконечного слайдера, который использовался в проекте [сахалин](https://github.com/ned4ded/sahalin/blob/master/src/scripts/carousel.js); Работает по след принципу: выгружает 3 изображения, при каждом следующем изображении обновляет массив. Работал с бд, используя id. 
+
 
 ### Tips
 - [Browser Specific Hacks](/tips/browser-hacks/)
