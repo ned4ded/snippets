@@ -9,4 +9,4 @@ $ npm i -S connect-ensure-login
 ```
 
 ## Example
-Usage example with Express and passport.js you would find [here](../../../libs/passport.js/local-combo/connect-ensure-login);
+Usage example with Express and passport.js you would find [here](https://github.com/ned4ded/snippets/tree/master/libs/passport.js/local-combo/connect-ensure-login.js);
