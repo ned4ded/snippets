@@ -1,13 +1,15 @@
 # snippets
 Table of Contents:
-1. [Frontend](#fronted):
-  1. [User interface](#ui):
+
+[Frontend](#frontend):
+  - [User interface](#ui):
     1. [Carousel](#carousel);
-    1. [Autocomplete](#autocomplete);
-    1. [Tabs](#tabs);
-    1. [Accordion](#accordion);
-  1. [Tips](#tips);
-1. [Backend](#backend):
+    2. [Autocomplete](#autocomplete);
+    3. [Tabs](#tabs);
+    4. [Accordion](#accordion);
+  - [Tips](#tips);
+
+[Backend](#backend):
 
 
 
