@@ -44,6 +44,12 @@ Table of Contents:
   - jQuery
   - Bootstrap 4
 
+#### Canvas
+- [Fabric.js](/libs/fabric/):
+  - Native JS;
+  - Powerful canvas animations;
+  - Easel (mylib for paint-like application);
+
 ### Tips
 - [Browser Specific Hacks](/tips/browser-hacks/)
 
