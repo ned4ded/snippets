@@ -34,8 +34,13 @@ passport.deserializeUser(function(id, cb) {
 
 exports.auth_process = function(req, res, next) {
   return passport.authenticate('local', {
-    successRedirect: '/home',
+    successRedirect: '/route',
     failureRedirect: '/login',
     failureFlash: false
   })(req, res, next);
+}
+
+exports.auth_logout = (req, res) => {
+  req.logout();
+  res.redirect('/');
 }
