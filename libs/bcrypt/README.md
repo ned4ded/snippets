@@ -14,5 +14,5 @@ Here is presented a list of high-efficient combinations with the other middlewar
 ## Examples
 Main usage [example file](./example.js) you would find hereby;
 With combinations:
-- [passport.js](../passport.js/local-combo/bcript.js): comparing passwords on login screen;
-- [mongoose](https://github.com/ned4ded/snippets/tree/master/frameworks/mongoose/User/bcript.model.js): hash user password before saving;
+- [passport.js](../passport.js/local-combo/bcrypt.js): comparing passwords on login screen;
+- [mongoose](https://github.com/ned4ded/snippets/tree/master/frameworks/mongoose/User/bcrypt.model.js): hash user password before saving;
