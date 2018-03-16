@@ -54,7 +54,7 @@ Table of Contents:
   - Express-session;
   - Body-parser;
 - [Bcrypt](/libs/bcrypt/) - Password hashing;
-- [Connect-ensure-login](/frameworks/express/bcrypt/) - Check if user is logged in. Require:
+- [Connect-ensure-login](/frameworks/express/connect-ensure-login/) - Check if user is logged in. Require:
   - Express;
   - Express-session;
   - Body-parser;
