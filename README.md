@@ -58,6 +58,7 @@ Table of Contents:
   - Express;
   - Express-session;
   - Body-parser;
-  
+#### Other
+- [Flash](/frameworks/express/flash/) - Flash messages with cookies.
 ### Model
 - [Mongoose](/frameworks/mongoose/);
