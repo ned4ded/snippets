@@ -13,10 +13,10 @@ Table of Contents:
 
 [Backend](#backend):
 1. [Authentication](#authentication);
-2. [Logic Other](#other);
-2. [Model](#model);
+1. [Logic Other](#other);
+1. [Model](#model);
 
-
+[Practices](#practices);
 
 
 ## Frontend
@@ -53,7 +53,7 @@ Table of Contents:
   - Easel (mylib for paint-like application);
 
 ### UI Other
-- Lightweight fullscreen presentation slider with animation and AJAX async slides loading; Небольшой файл разработан для бесконечного слайдера, который использовался в проекте [сахалин](https://github.com/ned4ded/sahalin/blob/master/src/scripts/carousel.js); Работает по след принципу: выгружает 3 изображения, при каждом следующем изображении обновляет массив. Работал с бд, используя id. 
+- Lightweight fullscreen presentation slider with animation and AJAX async slides loading; Небольшой файл разработан для бесконечного слайдера, который использовался в проекте [сахалин](https://github.com/ned4ded/sahalin/blob/master/src/scripts/carousel.js); Работает по след принципу: выгружает 3 изображения, при каждом следующем изображении обновляет массив. Работал с бд, используя id.
 
 
 ### Tips
@@ -75,3 +75,7 @@ Table of Contents:
 - [Flash](/frameworks/express/flash/) - Flash messages with cookies.
 ### Model
 - [Mongoose](/frameworks/mongoose/);
+
+## Practices
+- JS bilateral animation: code snippet [example](/practices/JS-bilateral-animation) of organizing forward and backward animation with callbacks:
+    - jQuery;
