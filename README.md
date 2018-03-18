@@ -13,7 +13,7 @@ Table of Contents:
 
 [Backend](#backend):
 1. [Authentication](#authentication);
-1. [Data parcing](#data-parcing);
+1. [Data parsing](#data-parsing);
 1. [Logic Other](#other);
 1. [Model](#model);
 
