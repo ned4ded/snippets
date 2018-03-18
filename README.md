@@ -13,6 +13,7 @@ Table of Contents:
 
 [Backend](#backend):
 1. [Authentication](#authentication);
+1. [Data parcing](#data-parcing);
 1. [Logic Other](#other);
 1. [Model](#model);
 
@@ -72,7 +73,7 @@ Table of Contents:
   - Express-session;
   - Body-parser;
 
-#### Form data parsing
+#### Data parsing
 - [Formidable](/libs/formidable/) - A Node.js module for parsing form data, especially file uploads:
   - Express / Node.js;
 
