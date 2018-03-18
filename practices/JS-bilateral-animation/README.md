@@ -9,6 +9,7 @@
 
 Использован в проекте [sahalin](https://github.com/ned4ded/sahalin/blob/master/src/scripts/canvas-save.animation.js);
 
+Приме на [jsfiddle](https://jsfiddle.net/ned4ded/t186eaa0/57/);
 
 ## Usage
 Пример вызова функции:
