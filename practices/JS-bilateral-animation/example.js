@@ -18,7 +18,7 @@ function handleCallbacks(callbacks) {
   return callbacks();
 }
 
-function animate (el, { forward, reverse }) {
+function animate (el, { forward, reverse } = {}) {
   const e = $( el );
 
   if(e.hasClass(settings.Name)) {
