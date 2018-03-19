@@ -14,8 +14,8 @@ It uses Strategies for supporting authentication using a user/pass combo, Facebo
 Here is presented a list of high-efficient combinations with the other middleware.
 
 - [bcrypt](../bcrypt/): encrypting [bcrypt function](https://en.wikipedia.org/wiki/Bcrypt) for hashing passwords before storing in DB;
-- [flash](https://github.com/ned4ded/snippets/tree/master/frameworks/express/flash): send flash messages if authentication fails;
-- [connect-ensure-login](https://github.com/ned4ded/snippets/tree/master/frameworks/express/connect-ensure-login/): ensures that a user is logged in.
+- [flash](https://github.com/ned4ded/snippets/tree/master/frameworks/express/middleware/flash): send flash messages if authentication fails;
+- [connect-ensure-login](https://github.com/ned4ded/snippets/tree/master/frameworks/express/middleware/connect-ensure-login/): ensures that a user is logged in.
 
 ## Examples
 Used in project [sahalin](https://github.com/ned4ded/sahalin);
