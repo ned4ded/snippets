@@ -29,7 +29,7 @@ Used in project: [sahalin](https://github.com/ned4ded/sahalin);
   });
 ```
 
-1. If fabric doesn't want to fit in whole canvas display, use `resize` method to resize canvas manually:
+2. If fabric doesn't want to fit in whole canvas display, use `resize` method to resize canvas manually:
 ``` Javascript
   const frame = document.getElementById('frame');
   const frameHeight = () => frame.clientHeight;
@@ -42,11 +42,11 @@ Used in project: [sahalin](https://github.com/ned4ded/sahalin);
   $( window ).resize( resize );
 ```
 
-1. Clearing canvas:
+3. Clearing canvas:
 ``` Javascript
   easel.clear()
 ```
-1. Getting blob object. Because of getting blob object is async function, you have to provide callback to handle blob-object; For example, save it with ajax:
+4. Getting blob object. Because of getting blob object is async function, you have to provide callback to handle blob-object; For example, save it with ajax:
 ``` Javascript
   easel.getBlob((b) => {
     const formdata = new FormData();
@@ -61,11 +61,11 @@ Used in project: [sahalin](https://github.com/ned4ded/sahalin);
     });
   });
 ```
-1. `RenderFromJson` method provides functionality to render saved fabricjs object on used canvas;
+5. `RenderFromJson` method provides functionality to render saved fabricjs object on used canvas;
 
-1. `hasHistory` method returns `true` or `false` depending on history existence; It could be useful for disabling/enabling buttons.
+6. `hasHistory` method returns `true` or `false` depending on history existence; It could be useful for disabling/enabling buttons.
 
-1. `renderLastState` restores last saved fabric's state and renders it on canvas. It destroys current state, which couldn't be evoked again. Useful for undo button. Callback could be passed as signature, it would be executed after rendering last state and saving renewal history:
+7. `renderLastState` restores last saved fabric's state and renders it on canvas. It destroys current state, which couldn't be evoked again. Useful for undo button. Callback could be passed as signature, it would be executed after rendering last state and saving renewal history:
 ``` Javascript
   const undo = document.getElementById('undo');
 
@@ -80,4 +80,4 @@ Used in project: [sahalin](https://github.com/ned4ded/sahalin);
   $( undo ).click( () => easel.renderLastState(historyCallback) );
 ```
 
-1. `listenState` and `listenMouse` trigger on `path:created` and `mouse:down` fabric's events respectively.
+8. `listenState` and `listenMouse` trigger on `path:created` and `mouse:down` fabric's events respectively.
