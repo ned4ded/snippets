@@ -24,3 +24,6 @@ Methods could be called one by one or in-chain on this object but the whole coll
 - Immutable interface: each step of multiple call returns new instance of the object, see [example](./combo/immutable.js);
 
 - Lazy initialization: each step of calculation is pushed in "operations" array and would be executed when the final data extraction method will be called. [See example](../lazy-initialization/combo/fluent-interface.js);
+
+## Optimization:
+- Memoization:  store a calculated value in `this.memo` property, when execution is called once, this property will be 'memorized' by the object (in other words, will be saved dynamically in the object) and will be presented instead of executing all the evaluations again ([example](https://github.com/ned4ded/snippets/tree/master/optimization/program/memoization));
