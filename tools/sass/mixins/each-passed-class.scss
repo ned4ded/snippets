@@ -1,0 +1,33 @@
+@mixin fill($names, $color) {
+  @each $name in $names {
+    &__#{$name} use {
+      fill: $color;
+    }
+  }
+}
+
+.icon {
+  @include fill(bar-chart coin escolation shield, $lightest);
+
+  // &__bar-chart use {
+  //   fill: $lightest;
+  // }
+  //
+  // &__coin use {
+  //   fill: $lightest;
+  // }
+  //
+  // &__escolation use {
+  //   fill: $lightest;
+  // }
+  //
+  // &__shield use {
+  //   fill: $lightest;
+  // }
+
+  @include fill(burger, $bright-turquoise);
+
+  // &__burger use {
+  //   fill: $bright-turquoise;
+  // }
+}

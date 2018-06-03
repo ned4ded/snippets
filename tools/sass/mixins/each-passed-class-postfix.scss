@@ -1,0 +1,39 @@
+@mixin fill($names, $color, $postfix: null) {
+  @each $name in $names {
+    &__#{$name} use {
+      @if $postfix {
+        &:#{$postfix} {
+          fill: $color;
+        }
+      } @else {
+        fill: $color;
+      }
+    }
+  }
+}
+
+.icon {
+  @include fill(bar-chart coin, white);
+  @include fill(bar-chart coin, green, hover);
+
+  // &__bar-chart use {
+  //   fill: white;
+  // }
+  //
+  // &__coin use {
+  //   fill: white;
+  // }
+
+  // &__bar-chart use {
+  //   &:hover {
+  //     fill: green;
+  //   }
+  // }
+  //
+  // &__coin use {
+  //   &:hover {
+  //     fill: green;
+  //
+  //   }
+  // }
+}

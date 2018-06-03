@@ -92,6 +92,8 @@ console.log({ ...obj, ...obj2 });
 // { key: 'value3', type: 'string' }
 ```
 
+The spread operator used on `Map` object will lead to converting `Map` object to plain `Array`.
+
 ## Destructuring assignment
 
 Синтаксис деструктурирующего присваивания в выражениях JavaScript позволяет извлекать данные из массивов или объектов при помощи синтаксиса, подобного объявлению массива или литералов в объекте.
@@ -138,4 +140,216 @@ const {
 console.log(englishTitle); // 'Scratchpad'
 console.log(localeTitle); // 'Javascript-Umgebund'
 
+```
+## Binding
+This paragraph explains JS `this` binding in functions. In global execution context (outside a function), `this` refers to the global object (ex. `window` in browser); Inside a function, the value of `this` depends on how the function is called and moreover on the mode in which the program or function behaves.
+
+For example:
+``` JavaScript
+// executes in Browser
+function f1() {
+  return this;
+}
+
+f1() === window; // true
+
+function f2() {
+  'use strict'; // see strict mode
+  return this;
+}
+
+f2() === undefined; // true
+```
+
+In strict mode, if `this` was not defined by the execution context, it remains undefined.
+
+`call` and `apply` function methods is used to pass the value of `this` from one context to another:
+
+``` JavaScript
+// An object can be passed as the first argument to call or apply and this will be bound to it.
+var obj = {a: 'Custom'};
+
+// This property is set on the global object
+var a = 'Global';
+
+function whatsThis() {
+  return this.a;  // The value of this is dependent on how the function is called
+}
+
+whatsThis();          // 'Global'
+whatsThis.call(obj);  // 'Custom'; function.call(thisArg, arg1, arg2, ...)
+whatsThis.apply(obj); // 'Custom'; func.apply(thisArg, [argsArray])
+```
+
+The `bind` method creates a new function with the same body and scope as function, on which this method was called, but where `this` occurs in the original function, in the new function it is permamentlty bound to the first argument of `bind` method, regardless of how the function is being used;
+
+Sum it up, the **early binding** allows referring to `this` context of the object where the original function was created in, but the **late binding**, otherwise, lets referring to `this` context of the entity where the function is called from.
+
+### Late binding
+
+Late binding is working by default using original function syntax `function() {}`. When the function is called inside another function or object, then `this` context is referring the place-of-calling context (**call side**).
+
+``` Javascript
+const getName = function() {
+  return this.name;
+};
+
+const f = name => {
+  return {
+    name,
+    getName
+  }
+};
+
+const a = {
+  name: 'another thing',
+  getName
+};
+
+const g = f('something');
+
+getName(); // TypeError: cannot read property of undefined
+g.getName(); // something
+a.getName(); // another thing
+
+const c = {
+  name: 'dope name',
+  getName() {
+    return this.name;
+  }
+}
+
+const func = c.getName;
+
+const m = {
+  name: 'awesome name',
+  getName: c.getName
+}
+
+c.getName(); // dope name
+func(); // TypeError: cannot read property of undefined
+m.getName(); // awesome name
+```
+
+JS check function context (`this`) at the moment of its calling. So, it is possible to refer to the same function in different objects and get a completely different result in return.
+
+``` JavaScript
+function setName(name) {this.name = name};
+
+const obj1 = {setName};
+const obj2 = {setName};
+
+obj1.setName = obj2.setName; // true
+
+obj1.setName('marting');
+obj2.setName('mike');
+
+console.log(obj1)
+console.log(obj2)
+
+// { setName: [Function: setName], name: 'martin' }
+// { setName: [Function: setName], name: 'mike' }
+```
+
+### Early Binding
+Arrow functions (`() => {}`) use early binding, so that, `this` context of arrow functions are referring to declaration side. They will be equal to the function producing after calling `bind(this)` method on it;
+
+``` Javascript
+const f = (name) => {
+  return {
+    name,
+    getName: (function() {
+      return this.name; // `this` now is equal to `f` function this, which is undefined
+    }).bind(this)
+  }
+}
+
+const func = (name) => {
+  return {
+    name,
+    getName: () => {
+      return this.name;
+    }
+  }
+}
+
+f(); // TypeError
+func(); // TypeError
+
+
+const fn = (name) => {
+  this.name = name;
+
+  return {
+    name: 'cool name',
+    getName: () => {
+      return this.name;
+    }
+  }
+}
+
+
+const c = fn('another name');
+c.getName(); // another name
+
+const t = {
+  name: 'dope name',
+  getName: c.getName,
+}
+
+t.getName(); // another name
+```
+
+## Event Emitter
+
+## Async approaches
+JS could be used in event-driven programming and has concurrency model based on an `event loop`. Mostly, JS Runtimes (for ex., based on v8 engine and used in chrome and node.js) are a single-threaded non-blocking asynchronous concurrent. This means, for instance, that JavaScript can process a mouse click while waiting for a database query to return information.
+
+Note, that async code couldn't be caught with `exception` statement. Moreover, no returning value is specified in async functions. Late binding doesn't work properly in async (well, it does, but you should keep this process in mind).
+
+```JavaScript
+const user = {
+  name: 'Tony',
+  printName() {
+    console.log(this.name);
+  },
+};
+
+setTimeout(user.printName, 100); // undefined
+
+// Wrapper
+setTimeout(() => user.printName(), 100); // 'Tony'
+
+// Bind manually
+setTimeout(user.printName.bind(user)), 100); // 'Tony'
+```
+
+src:
+- [video about Event loop](https://www.youtube.com/watch?v=8cV4ZvHXQL4);
+
+### Callbacks
+
+Cons:
+- callback hell;
+
+``` JavaScript
+const fs = require('fs');
+
+fs.readFile('somefile.txt', (err, content) => {
+  if(err) throw new Error('...');
+
+  console.log(content);
+})
+```
+### Promises
+``` JavaScript
+```
+### Coroutine
+``` JavaScript
+```
+### Async/await
+``` JavaScript
+```
+### Actor model
+``` JavaScript
 ```
